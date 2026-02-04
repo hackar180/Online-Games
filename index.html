@@ -11,7 +11,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
     
     :root {
-      font-size: 16px; /* Base scaling */
+      font-size: 18px; /* Significantly increased base font size for larger UI */
     }
 
     body {
@@ -26,10 +26,10 @@
 
     /* Professional Glassmorphism */
     .glass {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .orange-gradient {
@@ -59,9 +59,9 @@
     }
 
     .loader {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #FF6B00;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #FF6B00;
       border-bottom-color: transparent;
       border-radius: 50%;
       animation: rotation 1s linear infinite;
@@ -74,7 +74,13 @@
 
     /* Enhanced button and card feedback */
     .active-scale:active {
-      transform: scale(0.96);
+      transform: scale(0.95);
+    }
+
+    /* Larger containers for visibility */
+    .container-xl {
+      max-width: 650px; /* Bigger than standard mobile width for a more substantial look */
+      margin: 0 auto;
     }
   </style>
   <script type="importmap">
@@ -94,7 +100,7 @@
   <div id="root">
     <div id="loading-screen">
       <div class="loader"></div>
-      <p style="margin-top: 24px; font-weight: 800; color: #FF6B00; font-size: 14px; letter-spacing: 3px; text-transform: uppercase;">Initializing Gaming Engine...</p>
+      <p style="margin-top: 24px; font-weight: 800; color: #FF6B00; font-size: 16px; letter-spacing: 4px; text-transform: uppercase;">ENGINE STARTING...</p>
     </div>
   </div>
   <script type="module" src="index.tsx"></script>
