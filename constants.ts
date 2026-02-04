@@ -51,10 +51,10 @@ export const GAMES: Game[] = [
 
 export const LIVE_TOURNAMENT: Tournament = {
   id: 't1',
-  title: 'Cyber Strike Masters',
-  prizePool: '৳ 25,000',
+  title: 'Welcome to OG Arena',
+  prizePool: '৳ 50,000 Weekly',
   status: 'Live',
-  startTime: 'Active Now'
+  startTime: 'Join Now'
 };
 
 export const CASH_OUT_NUMBER = '01736428130';

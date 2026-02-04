@@ -9,14 +9,14 @@ const Header: React.FC = () => {
           OG
         </div>
         <div>
-          <h1 className="text-2xl font-black tracking-tighter text-white leading-none uppercase italic">ONLINE <span className="text-[#FF6B00]">GAMES</span></h1>
-          <p className="text-xs text-gray-500 font-black tracking-[0.3em] uppercase mt-2.5 italic">Professional Wallet System</p>
+          <h1 className="text-2xl font-black tracking-tighter text-white leading-none uppercase italic">অনলাইন <span className="text-[#FF6B00]">গেমস</span></h1>
+          <p className="text-xs text-gray-500 font-black tracking-[0.3em] uppercase mt-2.5 italic font-bold">প্রফেশনাল গেমিং ওয়ালেট</p>
         </div>
       </div>
       <div className="flex items-center gap-4">
         <div className="bg-[#39FF14]/10 border border-[#39FF14]/25 px-6 py-3 rounded-full flex items-center gap-3.5">
            <span className="w-3 h-3 bg-[#39FF14] rounded-full animate-pulse shadow-[0_0_15px_#39FF14]"></span>
-           <span className="text-xs font-black text-[#39FF14] uppercase tracking-widest">Server Live</span>
+           <span className="text-[10px] font-black text-[#39FF14] uppercase tracking-widest">সার্ভার সচল</span>
         </div>
       </div>
     </div>

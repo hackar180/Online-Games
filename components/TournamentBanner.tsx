@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { LIVE_TOURNAMENT } from '../constants';
 
 const TournamentBanner: React.FC = () => {
   return (
@@ -15,20 +14,19 @@ const TournamentBanner: React.FC = () => {
         
         <div className="absolute inset-0 p-6 flex flex-col justify-end">
           <div className="flex items-center gap-2 mb-2">
-            <span className="flex items-center gap-1.5 px-2.5 py-1 bg-red-600 rounded-lg text-[10px] font-black uppercase tracking-widest animate-pulse">
+            <span className="flex items-center gap-1.5 px-2.5 py-1 bg-orange-600 rounded-lg text-[10px] font-black uppercase tracking-widest animate-pulse">
               <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
-              Live Now
+              লাইভ অ্যারেনা
             </span>
-            <span className="text-[10px] text-white/60 font-bold uppercase tracking-widest">{LIVE_TOURNAMENT.startTime}</span>
           </div>
           
           <div className="flex justify-between items-end">
             <div>
-              <h3 className="text-xl font-black text-white leading-tight mb-1">{LIVE_TOURNAMENT.title}</h3>
-              <p className="text-[#FFD700] text-sm font-bold">Prize Pool: {LIVE_TOURNAMENT.prizePool}</p>
+              <h3 className="text-xl font-black text-white leading-tight mb-1">গেম খেলুন, টাকা জিতুন</h3>
+              <p className="text-orange-400 text-sm font-bold font-bold">সাপ্তাহিক প্রাইজ পুল: ৳ ৫০,০০০</p>
             </div>
-            <button className="px-5 py-2.5 bg-white text-[#020617] rounded-xl text-xs font-black uppercase tracking-widest hover:bg-[#FFD700] transition-colors shadow-lg">
-              Join Free
+            <button className="px-5 py-2.5 bg-white text-black rounded-xl text-xs font-black uppercase tracking-widest hover:bg-orange-500 transition-colors shadow-lg">
+              বিস্তারিত
             </button>
           </div>
         </div>
