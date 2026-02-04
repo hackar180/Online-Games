@@ -3,12 +3,17 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Online Games | প্রফেশনাল গেমিং ওয়ালেট</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+    
+    :root {
+      font-size: 16px; /* Base scaling */
+    }
+
     body {
       font-family: 'Hind Siliguri', sans-serif;
       background-color: #050505;
@@ -16,25 +21,32 @@
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
+
+    /* Professional Glassmorphism */
     .glass {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     .orange-gradient {
       background: linear-gradient(135deg, #FF6B00 0%, #FF9500 100%);
     }
+
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     
     @keyframes slideDown {
       from { transform: translateY(-100%); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
     .animate-sms {
-      animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     #loading-screen {
       position: fixed;
       inset: 0;
@@ -45,17 +57,24 @@
       justify-content: center;
       z-index: 9999;
     }
+
     .loader {
-      width: 40px;
-      height: 40px;
-      border: 4px solid #FF6B00;
+      width: 50px;
+      height: 50px;
+      border: 5px solid #FF6B00;
       border-bottom-color: transparent;
       border-radius: 50%;
       animation: rotation 1s linear infinite;
     }
+
     @keyframes rotation {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+    }
+
+    /* Enhanced button and card feedback */
+    .active-scale:active {
+      transform: scale(0.96);
     }
   </style>
   <script type="importmap">
@@ -75,7 +94,7 @@
   <div id="root">
     <div id="loading-screen">
       <div class="loader"></div>
-      <p style="margin-top: 20px; font-weight: bold; color: #FF6B00; font-size: 12px; letter-spacing: 2px;">LOADING ONLINE GAMES...</p>
+      <p style="margin-top: 24px; font-weight: 800; color: #FF6B00; font-size: 14px; letter-spacing: 3px; text-transform: uppercase;">Initializing Gaming Engine...</p>
     </div>
   </div>
   <script type="module" src="index.tsx"></script>
