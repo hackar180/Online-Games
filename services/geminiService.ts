@@ -1,25 +1,26 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-// Use process.env.API_KEY directly as per guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const getDepositHelp = async (question: string) => {
   try {
+    // Check if process.env is available, otherwise fail gracefully
+    if (typeof process === 'undefined' || !process.env.API_KEY) {
+      console.warn("API_KEY not found in environment.");
+      return "সিস্টেম বর্তমানে অফলাইনে আছে। দয়া করে এডমিনকে জানান।";
+    }
+
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: question,
       config: {
-        systemInstruction: `You are Valkyrie, the premium AI gaming assistant for "Online Games" Platform. 
-        Your tone is professional, helpful, and sophisticated. 
+        systemInstruction: `You are Valkyrie, the premium AI assistant for "Online Games" Platform. 
         Current user context: 
         - Manual send-money number: 01736428130 
         - Primary method: Nagad (Send Money)
         - Platform Name: Online Games
-        Mention that secure deposits usually finalize within 5 minutes after verifying the Transaction ID. 
-        If users ask about the SMS code, tell them it arrives as a system notification on their phone screen.`,
+        If users ask about the SMS code, tell them it appears as a system notification at the top of their screen.`,
         temperature: 0.6,
-        // When setting maxOutputTokens, thinkingBudget should also be set to reserve output space.
         maxOutputTokens: 200,
         thinkingConfig: { thinkingBudget: 50 },
       }
